@@ -4,7 +4,7 @@ export default function Programs() {
   return (
     <div>
         <section>
-        <div className="study-main">
+        <div className="study-main" id="study-main">
             <div className="study">
                 <h1>Программы Обучения</h1>
                 <div className="programs">

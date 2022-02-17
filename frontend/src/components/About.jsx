@@ -9,7 +9,7 @@ import Wrap3 from '../images/img-wrap3.jpg';
 export default function About() {
   return (
         <section>
-        <div className="about">
+        <div className="about" id="about">
 
             <div className="thesis">
                 Пожар может создать героя... <br/> или спрятать секрет.

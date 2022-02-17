@@ -1,3 +1,4 @@
+// import "antd/dist/antd.css";
 import './App.css';
 import About from './components/About';
 import Goverment from './components/Goverment';
@@ -7,27 +8,23 @@ import Programs from './components/Programs';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Carousel from './components/Carousel';
+import Login from './components/Login';
+
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
 
   return (
     <div>
-      <Goverment></Goverment>
+      <Routes>
+        <Route path="/" element=
+        {
+          [<Goverment />, <Header />, <Main />, <About />, <Programs />,
+          <Carousel />, <Contacts />, <Footer />]
+        } />
+        <Route path="/login" element={<Login />} />
+      </Routes>
 
-      <Header></Header>
-
-      <Main></Main>
-
-      <About></About>
-
-      <Programs></Programs>
-
-      <Carousel></Carousel>
-
-      <Contacts></Contacts>
-
-      <Footer></Footer>
-    
     </div>
   );
 }

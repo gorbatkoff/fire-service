@@ -47,7 +47,7 @@ export default function Footer() {
                     <li className="link">
                         <a href="">Президент Российской Федерации</a>
                     </li>
-                    <li class="link">
+                    <li className="link">
                         <a href="">Правительство Российской Федерации</a>
                     </li>
                 </div>

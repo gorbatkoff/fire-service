@@ -1,4 +1,3 @@
-// import { Slider } from 'antd';
 import './App.css';
 import About from './components/About';
 import Goverment from './components/Goverment';
@@ -7,13 +6,12 @@ import Main from './components/Main';
 import Programs from './components/Programs';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
-
-// import Slider from './components/Slider';
+import Carousel from './components/Carousel';
 
 function App() {
 
   return (
-    <div className="App">
+    <div>
       <Goverment></Goverment>
 
       <Header></Header>
@@ -24,11 +22,11 @@ function App() {
 
       <Programs></Programs>
 
+      <Carousel></Carousel>
+
       <Contacts></Contacts>
 
       <Footer></Footer>
-
-      {/* <Slider></Slider> */}
     
     </div>
   );

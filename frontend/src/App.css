@@ -67,8 +67,7 @@ body{
 .nav > .list > .nav-link a:hover{
     color: #ffa600;
     transition: 0.2s;
-    /* background: #023665; */
-    /* padding: 1em; */
+    
 }
 
 .header-wrapper{
@@ -385,4 +384,61 @@ main{
     color: #b1c6d7;
     font-size: 16px;
     transition: 0.5s;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: #01437b;
+    text-transform: uppercase;
+    width: 350px;
+    border-radius: 8px;
+    /* text-align: center; */
+    padding: 1em;
+    height: 450px;
+    margin: 10% auto;
+}
+
+.login-container h2 {
+    text-align: center;
+    /* border-bottom: 5px solid #ff5724; */
+}
+
+.login-form{
+    margin-top: 2em;
+}
+
+.login-form input{
+    padding: 0.5em;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+}
+
+.form {
+    margin-top: 1em;
+    border-bottom: 5px solid #ff5724;
+}
+
+.remember-me{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+}
+
+.button-form{
+    text-align: center;
+    margin-top: 6em;
+}
+
+.button-form button{
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    border-bottom: 4px solid #ff5724; 
 }

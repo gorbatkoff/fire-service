@@ -16,8 +16,8 @@ import axios from 'axios';
 
 import {message} from 'antd';
 
-const api = axios.create({
-  baseUrl: 'http://localhost:4001'
+const api = axios.create({ // declaration of API connection
+  baseURL: 'http://localhost:4001'
 });
 
 function App() {
@@ -33,7 +33,16 @@ function App() {
     }
     
     catch (err) {
-      alert("Error");
+      console.log(err);
+    }
+  }
+
+  const getUsers = async (req, res, next) => {
+    try {
+      console.log(res);
+
+    } catch (error) {
+      return res.send(400).json("Something gone wrong");
     }
   }
 

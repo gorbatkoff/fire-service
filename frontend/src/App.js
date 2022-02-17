@@ -10,19 +10,42 @@ import Footer from './components/Footer';
 import Carousel from './components/Carousel';
 import Login from './components/Login';
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
+import axios from 'axios';
+
+import {message} from 'antd';
+
+const api = axios.create({
+  baseUrl: 'http://localhost:4001'
+});
 
 function App() {
+
+  const logIn = async (login, password) => {
+    try {
+      const userLogin = {
+        login: login,
+        password: password
+      };
+      
+      await api.post('/login', userLogin);
+    }
+    
+    catch (err) {
+      alert("Error");
+    }
+  }
 
   return (
     <div>
       <Routes>
         <Route path="/" element=
-        {
-          [<Goverment />, <Header />, <Main />, <About />, <Programs />,
-          <Carousel />, <Contacts />, <Footer />]
-        } />
-        <Route path="/login" element={<Login />} />
+          {
+            [<Goverment />, <Header />, <Main />, <About />, <Programs />,
+            <Carousel />, <Contacts />, <Footer />]
+          } />
+        <Route path="/login" element={<Login logIn={logIn} />} />
       </Routes>
 
     </div>

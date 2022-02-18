@@ -146,12 +146,14 @@ main{
     justify-items: stretch;
     height: 300px;
     margin: 1em 0;
+    overflow: hidden;
 }
 
 .gallery > img{
     padding: 0 1em;
     overflow: hidden;
     object-fit: contain;
+
 }
 
 .about-us{
@@ -176,80 +178,70 @@ main{
     background-color: #fff;
 }
 
-.study{
-    height: 550px;
-    margin: 2em auto;
-    text-align: center;
-
-}
-
-.study a{
-    padding: 1em 2em;
-    text-decoration: none;
-    outline: none;
-    border: 1px solid #ff5724;
-    border-radius: 14px;
-    transition: 0.4s;
-    color:rgba(0, 80, 171, 1);
-    text-decoration: none;
-}
-
-.study a:hover{
-    transition: 0.4s;
-    background-color: #ff5724;
-    color: #fff;
-}
-
-.study h1{
-    margin: 1em auto;
-    text-align: center;
-    text-transform: uppercase;
+.card-container{
+    width: 320px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease-in;
     color: #023665;
 }
+
+.card-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px;
+    /* transition: 0.4s; */
+}
+
+.card-content{
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+.image-container img{
+    overflow: hidden;
+    height: 300px;
+}
+
+.card-title{
+    margin: 1rem 0;
+}
+
+.btn{
+    display: flex;
+    justify-content:center;
+}
+
+.btn button{
+    padding: 0.5rem;
+    background-color: #01437b;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-bottom: 0.5rem;
+}
+
+.btn button:hover{
+    background-color: #ff5724;
+}
+
+.btn button a{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+.btn button a:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
 
 .programs{
     display: flex;
     justify-content: space-evenly;
-    margin: 2em auto;
-}
-
-.unit{
-    padding: 1em;
-    color: black;
-    height: 400px;
-    width: 300px;
-    background-color: #076bde;
-    border: 1px solid white;
-    border-radius: 14px;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.unit > h4 {
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.unit-info{
-    padding: 1em;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.unit-info > ul > li {
-    text-align: center;
-    margin: 0.5em 0;
-    /* list-style-type: none; */
-}
-
-.unit p{
-    margin: 1em 0;
-    color: #fff;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    /* background-color: rgb(129, 129, 129); */
+    padding: 5rem;
+    border-bottom: 15px solid #01437b;
 }
 
 

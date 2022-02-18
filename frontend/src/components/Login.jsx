@@ -48,7 +48,7 @@ export default function Login({ logIn }) {
                     <div className="password form">
                         <p>Пароль</p>
 
-                        <input placeholder="Введите ваш пароль" onChange={enterPassword}></input>
+                        <input placeholder="Введите ваш пароль" type="password" onChange={enterPassword}></input>
 
                     </div>
                 </div>

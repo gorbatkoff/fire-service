@@ -36,7 +36,7 @@ export default function Carousel() {
         }
     }
 
-    useEffect(() => console.log("Change photo in slider"), [currentPhoto]);
+    // useEffect(() => console.log("Change photo in slider"), [currentPhoto]);
 
     return (
         <div className="container">

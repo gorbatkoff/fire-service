@@ -37,22 +37,13 @@ function App() {
     }
   }
 
-  // const getUsers = async (req, res, next) => {
-  //   try {
-  //     console.log(res);
-
-  //   } catch (error) {
-  //     return res.send(400).json("Something gone wrong");
-  //   }
-  // }
-
   return (
     <div>
       <Routes>
         <Route path="/" element=
           {
-            [<Goverment />, <Header />, <Main />, <About />, <Programs />,
-            <Carousel />, <Contacts />, <Footer />]
+            [<Goverment />, <Header />, <Main />, <About />, <Carousel />, <Programs />,
+            <Contacts />, <Footer />]
           } />
         <Route path="/login" element={<Login logIn={logIn} />} />
       </Routes>

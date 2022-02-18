@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 4001;
 const cors = require('cors'); // Providing middleware
+const {MongoClient} = require('mongodb');
 
 app.use(cors()); // usage cors middleware
 app.use(express.json()); // Распознование объекта как JSON 

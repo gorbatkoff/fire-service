@@ -37,14 +37,14 @@ function App() {
     }
   }
 
-  const getUsers = async (req, res, next) => {
-    try {
-      console.log(res);
+  // const getUsers = async (req, res, next) => {
+  //   try {
+  //     console.log(res);
 
-    } catch (error) {
-      return res.send(400).json("Something gone wrong");
-    }
-  }
+  //   } catch (error) {
+  //     return res.send(400).json("Something gone wrong");
+  //   }
+  // }
 
   return (
     <div>

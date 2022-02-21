@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
     color: #dde1e6;
 }
 
@@ -70,12 +71,16 @@ body{
     
 }
 
+.main-header{
+    background: linear-gradient(-135deg,#026fba,#01437b);
+}
+
 .header-wrapper{
     display: flex;
     height: 250px;
-    background-color: #1a4e87;
+    /* background-color: #1a4e87;*/
     justify-content: space-around;
-    align-items: baseline;
+    align-items: start;
 }
 
 main{
@@ -97,83 +102,70 @@ main{
     height: 120px;
 }
 
+/* Начало блока с информацией */
+
 .information{
     /* border: 1px solid black; */
     padding: 1em;
     width: 50%;
 }
 
-.information h5{
-    text-align: center;
-    padding: 1em 5em;
-    background-color: rgba(10,131,214,.64);
-    border-radius: 4px;
-}
-
-.information .ticker{
-    background: #fff;
-    color: #276cc3;
+.information-contacts{
     padding: 0.5em;
-    margin: 1em auto;
-    text-shadow: #000000 0px 1px 1px;
+    background-color: rgba(10,131,214,.64);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: max-content;
+    margin: 0 auto;
 }
 
-.wrapper-marque{
+.information-phone{
+    margin: 0px 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.information-contacts p {
+    font-weight: normal;
+}
+
+.information-links{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+
+.information-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.information-links a:hover{
+    opacity: 0.5;
+}
+
+#study-center{
+    color:rgb(255, 239, 9);
 }
 
 /* О Нас */
 .about{
     background-color: #e3e3e3;
-    color: black;
     padding: 2em;
 }
 
-.thesis {
-    width: max-content;
-    font-weight: bold;
+.title{
     color: black;
-    font-size: 25px;
-    font-family: 'Open Sans', sans-serif;
-    border-bottom: 5px solid #e84600;
-    margin: 1em 0;
+    text-transform: uppercase;
+    /* font-weight: bold; */
 }
 
-.gallery{
-    display: flex;
-    justify-content: space-around;
-    justify-items: stretch;
-    height: 300px;
-    margin: 1em 0;
-    overflow: hidden;
-}
-
-.gallery > img{
-    padding: 0 1em;
-    overflow: hidden;
-    object-fit: contain;
-
-}
-
-.about-us{
-    display: flex;
-    justify-content: space-between;
-    border-radius: 1px;
-    /* margin: 2em; */
-}
-
-.about-us > div{
-    border: 3px solid #e84600;
-    padding: 1em;
-}
-
-.about-us > div > p {
-    font-size: 17px;
-    color: rgb(66, 66, 66);
-    font-weight: bold;
-}
-
+/* End of about */
 .study-main{
     background-color: #fff;
 }

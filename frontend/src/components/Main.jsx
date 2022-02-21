@@ -1,11 +1,12 @@
 import React from 'react'
 import Logo from "../images/mchs.png";
 import Line from '../images/header-line.svg';
+import { PhoneTwoTone } from '@ant-design/icons';
 
 export default function Main() {
     return (
         <div>
-            <main>
+            <main className="main-header">
                 <div className="header-wrapper">
                     <div className="header-title">
                         <div className="header-logo">
@@ -18,21 +19,24 @@ export default function Main() {
 
                             <img src={Line} alt="" />
 
-                                <h4>Министерство Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и
-                                    ликвидации последствий стихийных бедствий</h4>
+                            <h4>Министерство Российской Федерации по делам гражданской обороны, чрезвычайным ситуациям и
+                                ликвидации последствий стихийных бедствий</h4>
                         </div>
                     </div>
 
                     <div className="information">
-                        <h5>МЧС Информирует</h5>
+                        <div className="information-contacts">
+                            <div className="information-phone">
+                                <PhoneTwoTone/> 8 (3952) 453-221
+                            </div>
+                            <p>Приёмная начальника учебного центра</p>
+                        </div>
 
-                        <div className="ticker">
-                            <marquee>
-                                <div className="wrapper-marque">
-                                    <div>«Телефон доверия»: 8 (3952) 40-99-99</div>
-                                    <div> 01 или 101 Единый телефон пожарных и спасателей</div>
-                                </div>
-                            </marquee>
+                        <div className="information-links">
+                            <a href="" className="nav-link">Деятельность</a>
+                            <a href="" className="nav-link">Документы</a>
+                            <a href="" className="nav-link">Контакты</a>
+                            <a href="" className="nav-link" id="study-center">Центр Обучения</a>
                         </div>
                     </div>
                 </div>

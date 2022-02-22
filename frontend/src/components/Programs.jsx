@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
-import Card from '../components/Card';
+import React, { useState } from 'react'
 import { Divider } from 'antd';
-
-import Photo from '../images/card-photo1.jfif';
-import Photo2 from '../images/card-photo2.jpg';
-
-import { Collapse } from 'antd';
-
-const { Panel } = Collapse;
-
+import CardsList from '../components/Cards/CardsList';
 export default function Programs() {
 
     const [type, setType] = useState("")
+
+    const changeCard = (type) => {
+        setType(type);
+    }
 
     return (
         <section className="programs">
@@ -19,16 +15,18 @@ export default function Programs() {
             <Divider plain><h1>Список Реализуемых Программ Обучения</h1></Divider>
 
             <div className="cascader">
-                <button onClick={() => alert("hello")}>Обучения</button>
-                <button>Переподготовка</button>
-                <button>Повышение</button>
+                <button onClick={() => changeCard("Study")}>Обучения</button>
+                <button onClick={() => changeCard("Retraining")}>Переподготовка</button>
+                <button onClick={() => changeCard("Improvement")}>Повышение</button>
+            </div>
+
+            <div className="programs-cards">
+                <CardsList type={type}/>
             </div>
 
         </section>
-    )
+    );
 }
-
-
 
 
 {/* <Card
@@ -41,4 +39,5 @@ export default function Programs() {
                 title="Система Тестирования"
                 imageUrl={Photo2}
                 body="Lorem ipsum dolor sit amet, consectetur adip lo Lorem ipsum dolor sit amet, consectetur adip lo Lorem ipsum dolor sit amet, consectetur adip lo"
-            /> */}
+            /> 
+*/}

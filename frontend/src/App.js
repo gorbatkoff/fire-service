@@ -7,14 +7,11 @@ import Main from './components/Main';
 import Programs from './components/Programs';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
-import Carousel from './components/Carousel';
+// import Carousel from './components/Carousel';
 import Login from './components/Login';
 
 import { Routes, Route } from 'react-router-dom';
-
 import axios from 'axios';
-
-import {message} from 'antd';
 
 const api = axios.create({ // declaration of API connection
   baseURL: 'http://localhost:4001'
@@ -42,7 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element=
           {
-            [<Goverment />, <Header />, <Main />, <About />, <Carousel />, <Programs />,
+            [<Goverment />, <Header />, <Main />, <About />, <Programs />, 
             <Contacts />, <Footer />]
           } />
         <Route path="/login" element={<Login logIn={logIn} />} />

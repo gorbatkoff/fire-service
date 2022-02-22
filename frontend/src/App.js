@@ -1,4 +1,3 @@
-// import "antd/dist/antd.css";
 import './App.css';
 import About from './components/About';
 import Goverment from './components/Goverment';
@@ -7,8 +6,8 @@ import Main from './components/Main';
 import Programs from './components/Programs';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
-// import Carousel from './components/Carousel';
 import Login from './components/Login';
+import Documents from './components/Documents';
 
 import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
@@ -40,7 +39,7 @@ function App() {
         <Route path="/" element=
           {
             [<Goverment />, <Header />, <Main />, <About />, <Programs />, 
-            <Contacts />, <Footer />]
+            <Documents/>, <Contacts />, <Footer />]
           } />
         <Route path="/login" element={<Login logIn={logIn} />} />
       </Routes>

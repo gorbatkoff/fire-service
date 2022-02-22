@@ -3,7 +3,7 @@ import { Divider } from 'antd';
 import CardsList from '../components/Cards/CardsList';
 export default function Programs() {
 
-    const [type, setType] = useState("")
+    const [type, setType] = useState("Study")
 
     const changeCard = (type) => {
         setType(type);
@@ -12,7 +12,9 @@ export default function Programs() {
     return (
         <section className="programs">
 
-            <Divider plain><h1>Список Реализуемых Программ Обучения</h1></Divider>
+            <div>
+                <Divider plain><h1>Список Реализуемых Программ Обучения</h1></Divider>
+            </div>
 
             <div className="cascader">
                 <button onClick={() => changeCard("Study")}>Обучения</button>
@@ -21,7 +23,7 @@ export default function Programs() {
             </div>
 
             <div className="programs-cards">
-                <CardsList type={type}/>
+                <CardsList type={type} />
             </div>
 
         </section>

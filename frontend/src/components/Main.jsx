@@ -32,13 +32,14 @@ export default function Main() {
                     <h2>Навигация По Сайту</h2>
 
                     <div main-contacts-links>
-                        <a href="" className="links">Деятельность</a>
-                        <a href="" className="links">Документы</a>
-                        <a href="" className="links">Контакты</a>
-                        <a href="" className="links" id="studying">Программы Обучения</a>
+                        <a href="#" className="links">Деятельность</a>
+                        <a href="#" className="links">Документы</a>
+                        <a href="#" className="links">Контакты</a>
+                        <a href="#" className="links" id="studying">Программы Обучения</a>
                     </div>
                 </div>
 
+                
 
             </div>
         </main>

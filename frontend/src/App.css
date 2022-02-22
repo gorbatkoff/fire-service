@@ -182,10 +182,11 @@ main{
     width: 320px;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
-    transition: 0.3s;
+    transition: 0.5s;
     animation: ease-in;
     color: #023665;
     margin: 3em 0;
+    /* margin: 0 auto; */
 }
 
 .card-container:hover{
@@ -211,6 +212,8 @@ main{
 .btn{
     display: flex;
     justify-content:center;
+    align-items: flex-end;
+    align-content: flex-end;
 }
 
 .btn button{
@@ -220,6 +223,8 @@ main{
     border-radius: 4px;
     transition: 0.5s;
     margin-bottom: 0.5rem;
+    align-content: flex-end; 
+    align-items: flex-end;
 }
 
 .btn button:hover{
@@ -238,9 +243,6 @@ main{
 
 
 .programs{
-    /* display: flex;    */
-    /* justify-content: space-evenly; */
-    /* background-color: rgb(129, 129, 129); */
     padding: 3em;
     border-bottom: 15px solid #01437b;
 }
@@ -258,7 +260,24 @@ main{
     padding: 0.5em 2em;
     border-radius: 15px;
     margin: 0 1em;
-    border: none;;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cascader button:hover{
+    background-color: rgba(0, 80, 171, 0.96);
+}
+/* End of cascader buttons */
+
+.programs-cards{
+    display: grid;
+    grid-template-columns: repeat(4, auto );
+    justify-content: center;
+}
+
+.programs-cards > div{
+    margin: 4em 2em;
 }
 
 /* Галерея */

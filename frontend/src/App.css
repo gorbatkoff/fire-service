@@ -62,6 +62,8 @@ body{
     color: #fff;
     text-decoration: none;
     transition: 0.2s;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .nav > .list > .nav-link a:hover{
@@ -243,8 +245,12 @@ main{
 
 
 .programs{
-    padding: 3em;
+    padding: 1em;
     border-bottom: 15px solid #01437b;
+}
+
+.programs-header{
+    background-color: yellow;
 }
 
 .cascader{
@@ -338,6 +344,39 @@ main{
     color: #fff;
 }
 
+.documents{
+    background: linear-gradient(-135deg,#026fba,#01437b);
+}
+
+.documents-header h2{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid #ff5724;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.license{
+    padding: 2em 1em;
+}
+
+.sertificate{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-sertificate{
+    font-size: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 .contacts{
     background-color: #fff;
     color: #023665;
@@ -378,6 +417,11 @@ main{
     font-size: 17px;
     color: #b1c6d7;
 }
+
+.footer-info h2{color: #fff;}
+.footer-phone h2{color: #fff;}
+.footer-nav h2 {color:#fff;}
+.footer-links h2 {color: #fff;}
 
 
 .footer-list{

@@ -43,7 +43,7 @@ export default function Footer() {
 
             <div className="footer-links">
                 <h2>Ссылки</h2>
-                <div className="links">
+                <div className="footer-link">
                     <li className="link">
                         <a href="">Президент Российской Федерации</a>
                     </li>

@@ -132,7 +132,6 @@ main{
 }
 
 .links {
-    
     color: #fff;
     font-size: 18px;
     margin: 0 1em;
@@ -147,6 +146,33 @@ main{
     color: #ffcc24;
     font-weight: bold;
 }
+
+.main-reception{
+    color: #fff;
+    display: flex;
+    /* padding: 1em; */
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main-reception > div{
+    margin: 1em 0;
+    font-size: 18px;
+    padding: 0.5em;
+}
+
+/* 
+.main-phone{
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5%;
+}
+ */
+
+
 /* About */
 
 /* О Нас */
@@ -440,7 +466,7 @@ main{
     color: #fff;
 }
 
-.links{
+.footer-link{
     list-style-type: none;
 }
 .link{
@@ -458,6 +484,9 @@ main{
 .login{
     display: flex;
     justify-content: center;
+    /* background-color: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%); */
+    background-color: #276cc3;
+
 }
 
 .login-container {
@@ -465,13 +494,14 @@ main{
     text-transform: uppercase;
     width: 350px;
     border-radius: 8px;
-    /* text-align: center; */
+    /* border: 3px solid #fff; */
     padding: 1em;
     height: 450px;
     margin: 10% auto;
 }
 
 .login-container h2 {
+    color: #fff;
     text-align: center;
     /* border-bottom: 5px solid #ff5724; */
 }
@@ -487,21 +517,26 @@ main{
     font-size: 17px;
 }
 
+
 .form {
     margin-top: 1em;
     border-bottom: 5px solid #ff5724;
 }
+
+.form p {color: #fff; font-weight: bold;}
 
 .remember-me{
     margin-top: 2em;
     display: flex;
     align-items: center;
     text-transform: none;
+    color: #fff;
+    font-weight: bold;
 }
 
 .button-form{
     text-align: center;
-    margin-top: 6em;
+    margin-top: 3em;
 }
 
 .button-form button{

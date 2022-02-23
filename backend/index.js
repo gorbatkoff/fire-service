@@ -1,76 +1,50 @@
+const { MongoClient } = require('mongodb');
 const express = require('express');
+const cors = require('cors'); // require cors policy
+const { body } = require('express-validator');
+const { errorsHandler } = require('./errorsHandler');
+
 const app = express();
 const PORT = 4001;
-const cors = require('cors'); // Providing middleware
-const mongoose = require('mongoose');
-const db = 'mongodb+srv://qwerty:qwerty12@cluster0.bnpch.mongodb.net/fire-service-db?retryWrites=true&w=majority';
-
-
+const client = new MongoClient('mongodb+srv://qwerty:qwerty12@cluster0.bnpch.mongodb.net/fire-service-db?retryWrites=true&w=majority')
 
 app.use(cors()); // usage cors middleware
-app.use(express.json()); // Распознование объекта как JSON 
+app.use(express.json()); // Распознование объекта как JSON
 
-async function start() {
+const start = async () => {
     try {
-        await mongoose.connect(db);
-
-        console.log("Соединение с базой данных установлено");
-
-        // await client.connect();
-
-        // const users = client.db().collection('users');
-
-        // const user = await users.find();
-
-        // console.log(user);
-
-    } catch (err) {
+        await client.connect();
+        console.log("Подключение к базе прошло успешно");
+    }
+    catch (err) {
         console.log(err);
     }
 }
 
-app.listen(4001, () => console.log("Server is listening on port", PORT));
+app.post("/login",
+    body('login').notEmpty().withMessage('Login is empty'),
+    body('password').notEmpty().withMessage('Passoword is empty'),
+    errorsHandler,
+
+    async (req, res) => {
+        try {
+            let login = req.body.login;
+            let password = req.body.password;
+
+            const users = client.db().collection("users");
+
+            await users.insertOne({
+                username: login,
+                password: password
+            });
+
+            return res.status(200).send("Everything is okey");
+
+        } catch (error) {
+            return res.status(400).send("Something gone wrong");
+        }
+    })
+
+app.listen(PORT, () => console.log('server is listening on port ' + PORT));
 
 start();
-
-app.get('/', async (req, res) => {
-
-    try {
-
-        await client.connect();
-        const users = await client.db().collection('users');
-
-        // const users = client.db().collection('users');
-        // console.log(db.users.find());
-        let b = users.find({ name: "Artem" });
-
-        console.log(b);
-        // res.send({users});
-
-        res.send(typeof b);
-
-    } catch (err) {
-        console.log(err);
-    }
-})
-
-// const signup = [];
-
-// app.post('/login', async (req, res) => {
-//     try {
-//         let login = req.body.login;
-//         let password = req.body.password;
-
-//         let userLogin = {
-//             login: login,
-//             password: password
-//         }
-
-//         signup.push(userLogin);
-
-//         return res.send(200).json("Hello, world!");
-
-//     } catch (error) {
-//         return res.status(400)
-//     }
-// })

@@ -92,13 +92,15 @@ export default function CardsList({type}) {
     ]
   
     return (
-        list.map((elem) => {
+        list.map((elem, i) => {
             if(elem.type == type){
                 return <Card 
                 title={elem.title} 
                 imageUrl={type == "Study" ? Photo3 : 
                 (type == "Retraining") ? Photo2 : Photo1} 
-                body={elem.body}/>
+                body={elem.body}
+                key={i}
+                />
             }
         })
 

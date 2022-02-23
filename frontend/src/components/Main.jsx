@@ -37,9 +37,18 @@ export default function Main() {
                         <a href="#" className="links">Контакты</a>
                         <a href="#" className="links" id="studying">Программы Обучения</a>
                     </div>
-                </div>
 
-                
+                    <div className="main-reception">
+                        <div className="main-reception-phone">
+                            8 (9876) 54 32-10
+                        </div>
+
+                        <div className="main-reception-text">
+                            Приёмная Начальника Учебного Центра
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </main>

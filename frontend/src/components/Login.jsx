@@ -21,8 +21,9 @@ export default function Login({ logIn }) {
 
         try {
             
-            logIn(login, password);
+            await logIn(login, password);
 
+            message.info("Good job");
         }
 
         catch (err) {
@@ -55,7 +56,7 @@ export default function Login({ logIn }) {
 
                 <div className="remember-me">
                     <input type="checkbox" />
-                    <p>Remember Me</p>
+                    <div>Remember Me</div>
                 </div>
 
                 <form action="" className="button-form" onSubmit={handleSubmit}>

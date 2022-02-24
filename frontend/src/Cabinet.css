@@ -1,0 +1,93 @@
+.home{
+    background-color: rgb(255, 255, 255);
+    height: 1000px;
+    font-family: sans-serif;
+}
+
+.home header {
+    display: flex;
+    justify-content: right;
+    padding: 0.5em;
+    background: rgba(44,44,194,1);
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.links a{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.cabinet{
+    background: linear-gradient(rgba(44,44,194,1) 0%, rgba(255,255,255,1) 100%);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    justify-content: space-around;
+}
+
+.cabinet > div {
+    padding: 1em;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+.profile{
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.avatar img{
+    border-radius: 50px;
+}
+
+.fio{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1em 0;
+    text-transform: uppercase;
+}
+
+.statistic{
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+
+.statistic > div{
+    padding: 0.5em;
+    border-radius: 15px;;
+    background-color: rgb(2, 112, 155);
+    color:#fff;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.solved h3{
+    color: #fff;
+    font-weight: bold;
+}
+.average h3{
+    color: #fff;
+    font-weight: bold;
+}
+
+.diagram{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50%;
+}

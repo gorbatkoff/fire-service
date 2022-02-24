@@ -9,14 +9,42 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Documents from './components/Documents';
 
-import { Routes, Route } from 'react-router-dom';
+import Home from './components/Cabinet/Home';
+
+import { message } from 'antd';
+
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const api = axios.create({ // declaration of API connection
   baseURL: 'http://localhost:4001'
 });
 
+api.interceptors.response.use(null, error => {
+  console.log('INTERCEPTOR CALLED');
+
+  const response = error.request.response;
+  let textOfError;
+
+  if (!response) {
+    textOfError = "Internal Error"
+  }
+
+  try {
+    textOfError = JSON.parse(response).message;
+  }
+
+  catch (e) {
+    textOfError = "JSON contains no error";
+  }
+
+  message.error(textOfError);
+
+})
+
 function App() {
+
+  let navigate = useNavigate();
 
   const logIn = async (login, password) => {
     try {
@@ -24,10 +52,12 @@ function App() {
         login: login,
         password: password
       };
-      
+
       await api.post('/login', userLogin);
+
+      navigate('/home')
     }
-    
+
     catch (err) {
       console.log(err);
     }
@@ -38,10 +68,11 @@ function App() {
       <Routes>
         <Route path="/" element=
           {
-            [<Goverment />, <Header />, <Main />, <About />, <Programs />, 
-            <Documents/>, <Contacts />, <Footer />]
+            [<Goverment />, <Header />, <Main />, <About />, <Programs />,
+            <Documents />, <Contacts />, <Footer />]
           } />
         <Route path="/login" element={<Login logIn={logIn} />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
 
     </div>

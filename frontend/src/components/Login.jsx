@@ -20,10 +20,8 @@ export default function Login({ logIn }) {
         e.preventDefault();
 
         try {
-            
-            await logIn(login, password);
 
-            message.info("Good job");
+            await logIn(login, password);
         }
 
         catch (err) {
